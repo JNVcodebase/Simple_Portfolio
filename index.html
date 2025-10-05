@@ -13,15 +13,16 @@
   }
   
   :root {
-    --primary-color: #1e3a5f; /* Deep Navy Blue */
-    --secondary-color: #d4af37; /* Gold */
-    --accent-color: #f4e4c1; /* Light Gold */
-    --dark-color: #0a1929;
-    --light-color: #f8f9fa;
-    --text-color: #333;
+    --primary-color: #ffffff; /* White */
+    --secondary-color: #008080; /* Teal */
+    --accent-color: #20b2aa; /* Light Teal */
+    --dark-color: #2a4d3a; /* Forest Green */
+    --light-color: #f5f9f6; /* Very Light Green */
+    --text-color: #333333;
     --card-bg: rgba(255, 255, 255, 0.9);
-    --gradient: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
-    --gold-gradient: linear-gradient(135deg, #d4af37 0%, #f4e4c1 100%);
+    --gradient: linear-gradient(135deg, #ffffff 0%, #f5f9f6 100%);
+    --teal-gradient: linear-gradient(135deg, #008080 0%, #20b2aa 100%);
+    --forest-gradient: linear-gradient(135deg, #2a4d3a 0%, #3d6a4f 100%);
     --text-on-gradient: #fff;
   }
   
@@ -30,7 +31,7 @@
     line-height: 1.6;
     color: var(--text-color);
     overflow-x: hidden;
-    background-color: var(--light-color);
+    background-color: var(--primary-color);
   }
   
   /* Loading Screen */
@@ -40,7 +41,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--gradient);
+    background: var(--forest-gradient);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,7 +63,7 @@
     100% { transform: rotate(360deg); }
   }
   
-  /* Particle Background */
+  /* Particle Background - Nature Theme */
   #particles-js {
     position: fixed;
     width: 100%;
@@ -70,7 +71,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #f5f9f6 100%);
   }
   
   /* Navigation */
@@ -81,14 +82,14 @@
     padding: 1rem 5%;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    box-shadow: 0 2px 10px rgba(30, 58, 95, 0.1);
+    box-shadow: 0 2px 10px rgba(42, 77, 58, 0.1);
     z-index: 1000;
     transition: all 0.3s ease;
   }
   
   nav.scrolled {
     padding: 0.5rem 5%;
-    box-shadow: 0 5px 20px rgba(30, 58, 95, 0.2);
+    box-shadow: 0 5px 20px rgba(42, 77, 58, 0.2);
   }
   
   .nav-container {
@@ -102,7 +103,7 @@
   .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    background: var(--gradient);
+    background: var(--forest-gradient);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -138,12 +139,12 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--gold-gradient);
+    background: var(--teal-gradient);
     transition: width 0.3s ease;
   }
   
   .nav-links a:hover {
-    color: var(--primary-color);
+    color: var(--secondary-color);
   }
   
   .nav-links a:hover::after {
@@ -180,10 +181,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('https://picsum.photos/seed/modern-skyscrapers-city-tech/1920/1080.jpg');
+    /* BACKGROUND IMAGE PLACEHOLDER: Add your hero background image here */
+    /* Recommended: A serene forest or nature scene with professional elements */
+    background-image: url('path/to/your/hero-image.jpg');
     background-size: cover;
     background-position: center;
-    opacity: 0.3;
+    opacity: 0.2;
     z-index: -1;
   }
   
@@ -206,8 +209,8 @@
   .hero h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: var(--dark-color);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
     animation: fadeIn 1s ease 0.2s both;
   }
   
@@ -220,7 +223,7 @@
     font-size: 1.5rem;
     max-width: 800px;
     margin-bottom: 2rem;
-    color: var(--accent-color);
+    color: var(--secondary-color);
     animation: fadeIn 1s ease 0.4s both;
   }
   
@@ -228,18 +231,18 @@
     display: inline-block;
     padding: 1rem 2rem;
     background: var(--secondary-color);
-    color: var(--dark-color);
+    color: var(--primary-color);
     border-radius: 50px;
     font-weight: bold;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 128, 128, 0.3);
     animation: fadeIn 1s ease 0.6s both;
   }
   
   .cta-button:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 10px 25px rgba(0, 128, 128, 0.4);
     background: var(--accent-color);
   }
   
@@ -249,7 +252,7 @@
     left: 50%;
     transform: translateX(-50%);
     animation: bounce 2s infinite;
-    color: var(--accent-color);
+    color: var(--secondary-color);
   }
   
   @keyframes bounce {
@@ -276,7 +279,7 @@
     margin-bottom: 3rem;
     text-align: center;
     position: relative;
-    color: var(--primary-color);
+    color: var(--dark-color);
   }
   
   .section-title::after {
@@ -287,7 +290,7 @@
     transform: translateX(-50%);
     width: 100px;
     height: 4px;
-    background: var(--gold-gradient);
+    background: var(--teal-gradient);
     border-radius: 2px;
   }
   
@@ -309,12 +312,14 @@
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(30, 58, 95, 0.2);
+    box-shadow: 0 10px 30px rgba(42, 77, 58, 0.2);
     transition: transform 0.3s ease;
+    border: 2px solid rgba(0, 128, 128, 0.3);
   }
   
   .about-image:hover {
     transform: scale(1.02);
+    border-color: var(--secondary-color);
   }
   
   .about-image img {
@@ -341,7 +346,7 @@
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
     line-height: 1.8;
-    color: var(--dark-color);
+    color: var(--text-color);
   }
   
   /* Skills Section */
@@ -355,10 +360,11 @@
     background: var(--card-bg);
     border-radius: 10px;
     padding: 2rem;
-    box-shadow: 0 5px 15px rgba(30, 58, 95, 0.1);
+    box-shadow: 0 5px 15px rgba(42, 77, 58, 0.1);
     transition: all 0.3s ease;
     overflow: hidden;
     position: relative;
+    border: 1px solid rgba(0, 128, 128, 0.2);
   }
   
   .skill-card::before {
@@ -368,24 +374,25 @@
     left: 0;
     width: 100%;
     height: 5px;
-    background: var(--gold-gradient);
+    background: var(--teal-gradient);
   }
   
   .skill-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(30, 58, 95, 0.2);
+    box-shadow: 0 15px 30px rgba(42, 77, 58, 0.2);
+    border-color: var(--secondary-color);
   }
   
   .skill-card h3 {
     margin-bottom: 1rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     display: flex;
     align-items: center;
   }
   
   .skill-card h3 i {
     margin-right: 0.5rem;
-    color: var(--secondary-color);
+    color: var(--accent-color);
   }
   
   .skill-list {
@@ -396,7 +403,7 @@
     margin-bottom: 0.5rem;
     position: relative;
     padding-left: 1.5rem;
-    color: var(--dark-color);
+    color: var(--text-color);
   }
   
   .skill-list li::before {
@@ -421,7 +428,7 @@
     transform: translateX(-50%);
     width: 2px;
     height: 100%;
-    background: var(--gradient);
+    background: var(--teal-gradient);
   }
   
   .timeline-item {
@@ -442,9 +449,10 @@
     background: var(--card-bg);
     border-radius: 10px;
     padding: 2rem;
-    box-shadow: 0 5px 15px rgba(30, 58, 95, 0.1);
+    box-shadow: 0 5px 15px rgba(42, 77, 58, 0.1);
     width: calc(50% - 30px);
     position: relative;
+    border: 1px solid rgba(0, 128, 128, 0.2);
   }
   
   .timeline-item:nth-child(odd) .timeline-content {
@@ -458,7 +466,7 @@
     text-align: right;
     padding-right: 40px;
     font-weight: bold;
-    color: var(--primary-color);
+    color: var(--secondary-color);
   }
   
   .timeline-item:nth-child(odd) .timeline-date {
@@ -479,7 +487,7 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: white;
+    background: var(--primary-color);
     border: 4px solid var(--secondary-color);
     z-index: 1;
   }
@@ -491,7 +499,7 @@
   
   .timeline-content h4 {
     margin-bottom: 1rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
   }
   
   .timeline-content ul {
@@ -503,7 +511,7 @@
     margin-bottom: 0.5rem;
     position: relative;
     padding-left: 1.5rem;
-    color: var(--dark-color);
+    color: var(--text-color);
   }
   
   .timeline-content li::before {
@@ -525,13 +533,15 @@
     background: var(--card-bg);
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(30, 58, 95, 0.1);
+    box-shadow: 0 5px 15px rgba(42, 77, 58, 0.1);
     transition: all 0.3s ease;
+    border: 1px solid rgba(0, 128, 128, 0.2);
   }
   
   .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(30, 58, 95, 0.2);
+    box-shadow: 0 15px 30px rgba(42, 77, 58, 0.2);
+    border-color: var(--secondary-color);
   }
   
   .project-image {
@@ -562,19 +572,19 @@
   
   .project-content p {
     margin-bottom: 1.5rem;
-    color: var(--dark-color);
+    color: var(--text-color);
   }
   
   .project-link {
     display: inline-block;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-weight: bold;
     text-decoration: none;
     transition: all 0.3s ease;
   }
   
   .project-link:hover {
-    color: var(--secondary-color);
+    color: var(--accent-color);
   }
   
   .project-link i {
@@ -597,27 +607,29 @@
     background: var(--card-bg);
     border-radius: 10px;
     padding: 2rem;
-    box-shadow: 0 5px 15px rgba(30, 58, 95, 0.1);
+    box-shadow: 0 5px 15px rgba(42, 77, 58, 0.1);
     display: flex;
     align-items: center;
     gap: 2rem;
     transition: all 0.3s ease;
+    border: 1px solid rgba(0, 128, 128, 0.2);
   }
   
   .education-card:hover {
     transform: translateX(10px);
-    box-shadow: 0 10px 25px rgba(30, 58, 95, 0.2);
+    box-shadow: 0 10px 25px rgba(42, 77, 58, 0.2);
+    border-color: var(--secondary-color);
   }
   
   .education-icon {
     width: 80px;
     height: 80px;
-    background: var(--gradient);
+    background: var(--teal-gradient);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: var(--primary-color);
     font-size: 2rem;
     flex-shrink: 0;
   }
@@ -629,11 +641,11 @@
   
   .education-content h4 {
     margin-bottom: 0.5rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
   }
   
   .education-content p {
-    color: var(--dark-color);
+    color: var(--text-color);
   }
   
   /* Certifications Section */
@@ -647,27 +659,29 @@
     background: var(--card-bg);
     border-radius: 10px;
     padding: 2rem;
-    box-shadow: 0 5px 15px rgba(30, 58, 95, 0.1);
+    box-shadow: 0 5px 15px rgba(42, 77, 58, 0.1);
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    border: 1px solid rgba(0, 128, 128, 0.2);
   }
   
   .certification-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(30, 58, 95, 0.2);
+    box-shadow: 0 15px 30px rgba(42, 77, 58, 0.2);
+    border-color: var(--secondary-color);
   }
   
   .certification-icon {
     width: 60px;
     height: 60px;
-    background: var(--gold-gradient);
+    background: var(--teal-gradient);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--dark-color);
+    color: var(--primary-color);
     font-size: 1.5rem;
     flex-shrink: 0;
   }
@@ -678,18 +692,19 @@
   }
   
   .certification-content p {
-    color: var(--dark-color);
+    color: var(--text-color);
   }
   
   /* Achievements Section */
   .achievements-container {
-    background: var(--gradient);
+    background: var(--forest-gradient);
     border-radius: 15px;
     padding: 3rem;
-    box-shadow: 0 10px 30px rgba(30, 58, 95, 0.3);
+    box-shadow: 0 10px 30px rgba(42, 77, 58, 0.3);
     color: white;
     position: relative;
     overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.1);
   }
   
   .achievements-container::before {
@@ -699,7 +714,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('https://picsum.photos/seed/ai-machine-learning-deep/1200/600.jpg');
+    /* BACKGROUND IMAGE PLACEHOLDER: Add your achievements background image here */
+    /* Recommended: A subtle forest or nature pattern */
+    background-image: url('path/to/your/achievements-background.jpg');
     background-size: cover;
     background-position: center;
     opacity: 0.1;
@@ -728,12 +745,12 @@
   .achievement-icon {
     width: 50px;
     height: 50px;
-    background: rgba(212, 175, 55, 0.2);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--secondary-color);
+    color: var(--accent-color);
     font-size: 1.5rem;
     flex-shrink: 0;
   }
@@ -754,6 +771,7 @@
     color: white;
     padding: 3rem 5%;
     text-align: center;
+    border-top: 1px solid rgba(0, 128, 128, 0.3);
   }
   
   .social-links {
@@ -774,11 +792,12 @@
     color: white;
     font-size: 1.5rem;
     transition: all 0.3s ease;
+    border: 1px solid rgba(0, 128, 128, 0.3);
   }
   
   .social-link:hover {
     background: var(--secondary-color);
-    color: var(--dark-color);
+    color: var(--primary-color);
     transform: translateY(-5px);
   }
   
@@ -859,7 +878,7 @@
     <div class="loader"></div>
   </div>
   
-  <!-- Particle Background -->
+  <!-- Particle Background - Nature Theme -->
   <div id="particles-js"></div>
   
   <!-- Navigation -->
@@ -896,11 +915,18 @@
     <h2 class="section-title">About Me</h2>
     <div class="about-container">
       <div class="about-images">
+        <!-- IMAGE PLACEHOLDER 1: Main About Image -->
+        <!-- Recommended: Professional headshot or image of you working in a natural setting -->
         <div class="about-image">
-          <img src="https://picsum.photos/seed/ai-programmer-coding-developer/400/300.jpg" alt="AI Developer Coding">
+          <!-- Replace the src below with your image path -->
+          <img src="path/to/your/main-about-image.jpg" alt="About Jahnavi">
         </div>
+        
+        <!-- IMAGE PLACEHOLDER 2: Secondary About Image -->
+        <!-- Recommended: Image showing you coding or working on a project, ideally with nature elements -->
         <div class="about-image small">
-          <img src="https://picsum.photos/seed/professional-coding-programming/300/200.jpg" alt="Professional Coding">
+          <!-- Replace the src below with your image path -->
+          <img src="path/to/your/secondary-about-image.jpg" alt="Jahnavi Coding">
         </div>
       </div>
       <div class="about-content">
@@ -1059,7 +1085,9 @@
     <div class="projects-container">
       <div class="project-card">
         <div class="project-image">
-          <img src="https://picsum.photos/seed/voice-recognition-ai-speech-technology/400/200.jpg" alt="Voice Recognition AI Technology">
+          <!-- IMAGE PLACEHOLDER 3: First Project Image -->
+          <!-- Recommended: Voice recognition or speech emotion visualization -->
+          <img src="path/to/your/voice-recognition-project.jpg" alt="Voice Recognition Project">
         </div>
         <div class="project-content">
           <h3>Speech Emotion Recognition</h3>
@@ -1069,7 +1097,9 @@
       </div>
       <div class="project-card">
         <div class="project-image">
-          <img src="https://picsum.photos/seed/cybersecurity-firewall-network-protection/400/200.jpg" alt="Cybersecurity Firewall Network Protection">
+          <!-- IMAGE PLACEHOLDER 4: Second Project Image -->
+          <!-- Recommended: Cybersecurity or firewall visualization -->
+          <img src="path/to/your/cybersecurity-project.jpg" alt="Cybersecurity Project">
         </div>
         <div class="project-content">
           <h3>Cyber Threat Intelligence Mining</h3>
@@ -1269,7 +1299,7 @@
       observer.observe(item);
     });
     
-    // Particle background
+    // Particle background with nature theme (teal and green particles)
     const particlesContainer = document.getElementById('particles-js');
     const particlesCount = 100;
     
@@ -1278,7 +1308,15 @@
       particle.style.position = 'absolute';
       particle.style.width = Math.random() * 5 + 'px';
       particle.style.height = particle.style.width;
-      particle.style.backgroundColor = `rgba(30, 58, 95, ${Math.random() * 0.5 + 0.2})`;
+      
+      // Mix of teal and forest green particles
+      const isTeal = Math.random() > 0.5;
+      if (isTeal) {
+        particle.style.backgroundColor = `rgba(0, 128, 128, ${Math.random() * 0.5 + 0.2})`;
+      } else {
+        particle.style.backgroundColor = `rgba(42, 77, 58, ${Math.random() * 0.5 + 0.2})`;
+      }
+      
       particle.style.borderRadius = '50%';
       particle.style.left = Math.random() * 100 + '%';
       particle.style.top = Math.random() * 100 + '%';
